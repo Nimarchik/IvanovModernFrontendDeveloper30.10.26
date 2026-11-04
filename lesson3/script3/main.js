@@ -103,3 +103,15 @@ for (let i = 0; i < str1.length; i++) {
 
 
 
+// Визначити, чи є задане шестизначне число дзеркальним? (123321, 147741)
+
+const isMirrorNum = (num) => {
+  const str = num.toString();
+  
+  return str === str.split('').reverse('').join('');
+}
+
+console.log(
+  isMirrorNum(123321),
+  isMirrorNum(147741)
+);
