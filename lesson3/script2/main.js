@@ -1,39 +1,39 @@
 // За допомогою prompt запитати як звуть користувача. За допомогою alert вивести "Hello, John! How are you?", де John це те, що ввів користувач
 
-// const yourName = prompt('What is your name?');
+const yourName = prompt('What is your name?');
 
-// alert(`Hello, ${yourName}! How are you?`);
+alert(`Hello, ${yourName}! How are you?`);
 
 // Створити скрипт для складання, віднімання, множення та поділу двох чисел та виведення результатів
 
-// const num1 = prompt('Enter the first number:');
-// const num2 = prompt('Enter the second number:');
-// const arithmetic = prompt('What action should be performed?');
+const num1 = prompt('Enter the first number:');
+const num2 = prompt('Enter the second number:');
+const arithmetic = prompt('What action should be performed?');
 
-// switch (arithmetic) {
-//   case '+':
-//     alert(`${num1} + ${num2} = ${+num1 + +num2}`);
-//     break;
-//   case '-':
-//     alert(`${num1} - ${num2} = ${+num1 - +num2}`);
-//     break;
-//   case '/':
-//     alert(`${num1} / ${num2} = ${+num1 / +num2}`);
-//     break;
-//   case '*':
-//     alert(`${num1} * ${num2} = ${+num1 * +num2}`);
-//     break;
-//   default:
-//     alert('There is no such meaning in mathematics');
-//     break;
-// }
+switch (arithmetic) {
+  case '+':
+    alert(`${num1} + ${num2} = ${+num1 + +num2}`);
+    break;
+  case '-':
+    alert(`${num1} - ${num2} = ${+num1 - +num2}`);
+    break;
+  case '/':
+    alert(`${num1} / ${num2} = ${+num1 / +num2}`);
+    break;
+  case '*':
+    alert(`${num1} * ${num2} = ${+num1 * +num2}`);
+    break;
+  default:
+    alert('There is no such meaning in mathematics');
+    break;
+}
 
 //  Створити скрипт, який отримує два значення і виводить true, якщо значення рівні, false - якщо ні
 
-// const a = prompt('Enter the first number:');
-// const b = prompt('Enter the second number:');
+const a = prompt('Enter the first number:');
+const b = prompt('Enter the second number:');
 
-// a == b ? alert('Equal values') : alert('The values ​​are not equal');d
+a == b ? alert('Equal values') : alert('The values ​​are not equal');
 
 // Визначити середнє арифметичне трьох чисел
 
@@ -49,11 +49,13 @@ console.log(Math.round(sum / arr.length));
 
 // Розкласти по цифрах п'ятизначне число і вивести у вихідному порядку через пробіл (використовувати оператор “розподіл по модулю” (%)
 
-let num = '25789';
-let count = 0
+const num = 55767;
+const arrays = [];
+let temp = num;
 
-for (let i = 0; i < num.length; i++) {
-  
+for (let i = 0; i < 5; i++) {
+  arrays.unshift(temp % 10);
+  temp = Math.floor(temp / 10);
 }
 
-console.log(+num[0]);
+console.log(arrays.join(' '));
