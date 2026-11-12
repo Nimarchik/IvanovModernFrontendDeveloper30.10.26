@@ -59,14 +59,17 @@ let users = [
 
 
 function phineUsers(arr) {
-  let balanceUsers = arr.map(item => ({
+  const balanceUsers = arr.map(item => ({
     phone: item.phone,
     balance: parseFloat(item.balance.replace(/[$,]/g, '')),
   }))
 
-  let phoneUser = balanceUsers.filter(item => item.balance > 2000).map(item => item.phone);
+  const phoneUser = balanceUsers.reduce((acc, item) => {
+    if(item.balance > 2000) acc.push(item.phone)
+    return acc
+  }, [])
 
-  let sumBalance = balanceUsers.reduce((acc, item) => acc + item.balance, 0);
+  const sumBalance = balanceUsers.reduce((acc, item) => acc + item.balance, 0);
 
   console.log(+sumBalance.toFixed(2));
   console.log(phoneUser);
