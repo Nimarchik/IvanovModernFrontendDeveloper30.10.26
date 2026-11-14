@@ -1,4 +1,4 @@
-const arrray = [1, 2, 3, 4, 5, 6, 7, 7];
+const arrray = [1, 2, 3, 4, 5, 6, 7, 5];
 
 function removeElement(arr, el) {
   const removeEl = arr.reduce((acc, item) => {
@@ -6,8 +6,8 @@ function removeElement(arr, el) {
     return acc
   }, [])
 
-  let set = new Set(removeEl);
-  return console.log([...set]);
+  console.log(removeEl);
+  
 }
 
 removeElement(arrray, 5)
