@@ -1,0 +1,12 @@
+.menu {
+  display: flex;
+  gap: 25px;
+
+}
+
+.menuBtn {
+  cursor: pointer;
+  padding: 6px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
